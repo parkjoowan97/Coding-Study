@@ -2,7 +2,7 @@
 import math
 def solution1(brown, yellow):
     a = brown + yellow #전체 타일 갯수 a
-    for i in range (1,int(math.sqrt(a))+1): #a = i * (a//i) = i * b (i < b)
+    for i in range (1,int(math.sqrt(a))+1): #a = i * (a//i) = i * b (i <= b)
         if a % i == 0:
             b = a // i 
             if (i - 2) * (b - 2) == yellow: #yellow = (i-2) * (b-2)
@@ -11,7 +11,7 @@ def solution1(brown, yellow):
 
 #풀이 2 (Brown 활용)
 def solution2(brown,yellow):
-    for i in range (1,int(math.sqrt(yellow))+1): #yellow = i * (yellow//i) = i * b (i < b)
+    for i in range (1,int(math.sqrt(yellow))+1): #yellow = i * (yellow//i) = i * b (i <= b)
         if yellow % i == 0:
             b = yellow // i 
             if (i + 2) * (b + 2) == brown + yellow: #brown + yellow = (i+2) * (b+2)
