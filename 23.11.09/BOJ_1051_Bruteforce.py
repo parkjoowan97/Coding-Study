@@ -1,3 +1,4 @@
+#BOJ 1051 숫자정사각형
 N,M = map(int,input().split())
 A = []
 for i in range (0,N):
