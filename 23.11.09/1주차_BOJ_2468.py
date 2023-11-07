@@ -1,3 +1,4 @@
+#BOJ 2468 안전지대 실버1
 from collections import deque
 N = int(input())
 A = []
